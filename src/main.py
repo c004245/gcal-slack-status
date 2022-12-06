@@ -1,4 +1,10 @@
 import datetime
+
+from gcal_client import GoogleCalendarClient
+from slack_client import slack_client
+from google_calendar_client import CalendarClient
+from messaging_client import MessagingClient
+
 STATUS = {
     "연차": {'status_text': '[연차] Paid Time Off', 'status_emoji': ':desert_island:'},
     "재택": {'status_text': '[재택] Work From Home', 'status_emoji': ':house:'},
