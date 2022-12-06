@@ -4,7 +4,7 @@ class EventsList(Dict):
     user_name: str
     event_summary: str
 
-class GoogleCalendarClient:
+class CalendarClient:
     def __init__(self, calendar_service):
         self.calendar_service = calendar_service
 

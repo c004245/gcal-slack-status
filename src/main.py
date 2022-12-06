@@ -1,8 +1,8 @@
 import datetime
 
 from gcal_client import GoogleCalendarClient
-from slack_client import slack_client
-from google_calendar_client import CalendarClient
+from slack_client import SlackClient
+from calendar_client import CalendarClient
 from messaging_client import MessagingClient
 
 STATUS = {
@@ -17,7 +17,7 @@ def main(calendar, messaging):
         end_date = (datetime.date.today() + datetime.timedelta(days=1)).strftime("%Y-%m-%d") + 'T00:00:00Z'
 
         events = calendar.get_events(CALENDAR_NAME, start_date, end_date)
-        print("events...... "  events)
+        print("events......", events)
 
         for event in events:
             user_name, event_name = event["user_name"], event["event_summary"]
